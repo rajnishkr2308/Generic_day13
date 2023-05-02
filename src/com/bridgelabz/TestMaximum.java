@@ -1,4 +1,6 @@
 package com.bridgelabz;
+import java.util.ArrayList;
+import java.util.List;
 
     /*
     create Generic Class to take in 3 variables of
@@ -14,6 +16,25 @@ package com.bridgelabz;
             this.x = x;
             this.y = y;
             this.z = z;
+        }
+
+        /*
+        Multiple Variables in One Generic Method to find maximum
+     */
+        public static <T extends Comparable<T>> T maxOfMultipleVariables(T... x) {
+/*
+    List of elements are added in the Array as variableArray and using
+    CompareTo method to test the maximum of multiple variables
+ */
+            T maximum = x[0];
+            List<T> variableArray = new ArrayList<T>();
+            for (T element : x) {
+                variableArray.add(element);
+                if (element.compareTo(maximum) > 0) {
+                    maximum = element;
+                }
+            }
+            return maximum;
         }
 
     /*
