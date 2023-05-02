@@ -1,6 +1,20 @@
 package com.bridgelabz;
 
-public class TestMaximum {
+    /*
+    create Generic Class to take in 3 variables of
+    Generic Type
+ */
+    public class TestMaximum <T extends Comparable<T>> {
+
+        T x,y,z;
+        /*
+            Parameter constructor
+         */
+        public TestMaximum(T x, T y, T z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
 
     /*
         Ensure the Generic Type extends Comparable
@@ -89,6 +103,10 @@ public class TestMaximum {
         maxOfThreeStrings("Apple", "Peach", "Banana");
         //TC1.3: Given Maximum at third position
         maxOfThreeStrings("Banana", "Apple", "Peach");
+
+        /*
+            Call method of three variables
+         */
 
             System.out.println(" *** Maximum Of 3 Variables *** ");
             //Printing the Call methods
